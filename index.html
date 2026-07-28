@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#5b4b8a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Strong & Lean">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg">
+  <link rel="apple-touch-icon" href="./icon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Strong & Lean</title>
+</head>
+<body>
+  <header>
+    <div><span class="eyebrow">Vicki's program</span><h1>Strong & Lean</h1></div>
+    <button id="backupButton" class="secondary">Backup now</button>
+  </header>
+  <main>
+    <nav id="dayTabs" aria-label="Workout days"></nav>
+    <section class="hero">
+      <div><span id="dayKicker" class="eyebrow"></span><h2 id="dayTitle"></h2><p id="dayDescription"></p></div>
+      <label>Location<select id="location"><option value="gym">Gym</option><option value="home">Home</option></select></label>
+    </section>
+    <section id="warmupSection"><h3>Warm-up</h3><div id="warmup" class="chips"></div></section>
+    <section id="cardioSection"><h3>Cardio</h3><div class="card cardio"><div><strong id="cardioTiming"></strong><p id="cardioText"></p></div><span id="cardioDuration" class="pill"></span></div></section>
+    <section><h3>Strength work</h3><div id="exerciseList"></div></section>
+    <section class="card timer-card">
+      <div><span class="eyebrow">Rest timer</span><div id="timerDisplay">01:00</div></div>
+      <div class="timer-controls"><button data-rest="45">45s</button><button data-rest="60">60s</button><button data-rest="90">90s</button><button id="timerToggle" class="primary">Start</button></div>
+    </section>
+    <section class="card">
+      <h3>Session journal</h3>
+      <textarea id="notes" rows="4" placeholder="How did it feel? Pain, form, energy, next-time notes…"></textarea>
+      <div class="actions"><button id="saveWorkout" class="primary">Save workout</button><button id="exportButton">Export JSON</button><label class="buttonlike">Import JSON<input id="importInput" type="file" accept="application/json"></label></div>
+      <p id="status" class="status" role="status"></p>
+    </section>
+    <details class="card"><summary>Backup settings</summary><p>Daily backups use the secure Worker. No GitHub token is stored in this app.</p><label>Worker URL<input id="workerUrl" placeholder="https://strong-lean-backup.your-subdomain.workers.dev"></label><label>App backup key<input id="backupKey" type="password" autocomplete="off"></label><button id="saveSettings">Save settings</button></details>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
