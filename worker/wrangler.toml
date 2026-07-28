@@ -1,0 +1,8 @@
+name = "strong-lean-backup"
+main = "src/index.js"
+compatibility_date = "2026-07-01"
+
+[vars]
+GITHUB_OWNER = "YOUR_GITHUB_USERNAME"
+GITHUB_REPO = "strong-and-lean"
+GITHUB_BRANCH = "main"
