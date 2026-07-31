@@ -1,0 +1,23 @@
+nav{grid-template-columns:repeat(4,1fr)}
+.progress-hero{padding:28px 8px 8px;text-align:center}
+.progress-hero h2{font-size:1.8rem;margin:.35rem 0}
+.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.stat-card{background:white;border:1px solid var(--line);border-radius:18px;padding:16px;text-align:center}
+.stat-icon{font-size:1.45rem}
+.stat-value{font-size:1.7rem;font-weight:850;color:var(--accent);font-variant-numeric:tabular-nums}
+.stat-label{font-size:.78rem;color:#6d6578}
+.section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.week-garden{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.week-flower{background:white;border:1px solid var(--line);border-radius:16px;min-height:80px;display:grid;place-items:center;text-align:center;padding:7px}
+.week-flower .bloom{font-size:1.8rem;filter:grayscale(1);opacity:.25}
+.week-flower.complete{background:#f1e9fb}
+.week-flower.complete .bloom{filter:none;opacity:1}
+.week-flower small{display:block;color:#6d6578}
+.weekly-days{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.weekly-day{background:white;border:1px solid var(--line);border-radius:16px;padding:14px 8px;text-align:center}
+.weekly-day.done{border-color:#9b7bc1;background:#f1e9fb}
+.weekly-day .check{font-size:1.4rem}
+.win-row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.win-row:last-child{border-bottom:0}
+.empty-progress{text-align:center;color:#6d6578;padding:18px}
+@media(max-width:520px){.section-heading{display:block}.week-flower{min-height:72px}.week-flower .bloom{font-size:1.45rem}}
